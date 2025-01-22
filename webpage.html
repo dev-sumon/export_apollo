@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Apollo - Verified Leads, Low Prices</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4fb;
+            color: #333333;
+        }
+        header {
+            background-color: #003366;
+            color: #FFD700;
+            padding: 30px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header img {
+            max-width: 80%;
+            height: auto;
+            max-height: 200px;
+            margin: 0 auto 15px;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        header p {
+            margin: 0;
+            font-size: 20px;
+        }
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            margin: 20px;
+        }
+        .order-section {
+            flex: 1;
+            max-width: 752px;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px 20px 0 0;
+            box-sizing: border-box;
+            color: rgb(44, 51, 68);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+        .video-section {
+            flex: 1;
+            max-width: 600px;
+        }
+        .video-section iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+        }
+        section h2 {
+            color: #003366;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .contact h2 {
+            background-color: #003366;
+            color: #FFD700;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input, form select, form button {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+            color: #333333;
+        }
+        form input, form select {
+            width: 100%;
+        }
+        .extra {
+            margin-top: 20px;
+        }
+        .extra input {
+            width: 100%;
+        }
+        .total-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #003366;
+            color: #FFD700;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #003366;
+            text-align: center;
+            padding: 15px 0;
+            color: #FFD700;
+            font-size: 14px;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contact a {
+            color: #003366;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        .contact img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .instructions {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #003366;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #cccccc;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .instructions ul {
+            padding-left: 20px;
+        }
+        .instructions ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .instructions ul li:before {
+            content: "✔";
+            position: absolute;
+            left: -25px;
+            top: 0;
+            color: #003366;
+        }
+    </style> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="image/EXPORT (3).png" alt="Export Apollo Logo">
+        <h1>Export Apollo</h1>
+        <p>Verified Leads, Low Prices</p>
+    </header>
+
+    <div class="content-wrapper">
+        <!-- Order Form Section (Left) -->
+        <div class="order-section">
+            <h2>Order Your Leads</h2>
+            <form action="mailto:ahsanulhaque12394@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="phone">Your Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="amount">Select Lead Amount:</label>
+                <select id="amount" name="amount" required onchange="updateTotal()">
+                    <option value="10k">10k - $40</option>
+                    <option value="20k">20k - $60</option>
+                    <option value="50k">50k - $140</option>
+                    <option value="100k">100k - $280</option>
+                    <option value="1m">1M - $2500</option>
+                </select>
+
+                <label for="apollo-url">Apollo Search URL:</label>
+                <input type="url" id="apollo-url" name="apollo-url" placeholder="Paste your Apollo search URL here" required>
+
+                <div class="extra">
+                    <label for="extra-links">Additional Links (Extra $5 per link):</label>
+                    <input type="number" id="extra-links" name="extra-links" placeholder="Enter number of additional links" min="0" onchange="updateTotal()">
+                </div>
+
+                <div class="total-box" id="total-box">
+                    Total: $0
+                </div>
+
+                <button type="button" onclick="redirectToPayoneer()">Order Now</button>
+            </form>
+        </div>
+
+        <!-- Instructions and Video Section (Right) -->
+        <div style="flex: 1; max-width: 600px; display: flex; flex-direction: column; gap: 30px;">
+            <!-- Instructions Section -->
+            <div class="instructions">
+                <h2>Instructions:</h2>
+                <ul>
+                    <li>✅ Make sure to tick the "Verified" filter under "Email Status" in Apollo</li>
+                    <li>✅ Create your Apollo filters and copy the search URL</li>
+                    <li>✅ Paste the search URL in the order form</li>
+                    <li>✅ Your CSV file will be sent to you in hours</li>
+                    <li>✅ Need bulk data? Email hello@exportapollo.in</li>
+                </ul>
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-section">
+                <h2>How to Order</h2>
+                <iframe src="https://www.youtube.com/embed/avW65iWgY5I?start=33" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <h2>Contact Us</h2>
+        <div class="contact">
+            <p>
+                <a href="mailto:ahsanulhaque12394@gmail.com">
+                    <img src="https://img.icons8.com/ios-filled/50/003366/email-open.png" alt="Email Icon">
+                    Contact us via Email
+                </a>
+            </p>
+            <p>
+                <a href="https://wa.link/t25k2w" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/003366/whatsapp.png" alt="WhatsApp Icon">
+                    Contact us on WhatsApp
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Export Apollo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function updateTotal() {
+            const amount = document.getElementById('amount').value;
+            const extraLinks = document.getElementById('extra-links').value || 0;
+            const totalCost = calculateTotalCost(amount, extraLinks);
+            document.getElementById('total-box').textContent = `Total: $${totalCost}`;
+        }
+
+        function redirectToPayoneer() {
+            const amount = document.getElementById('amount').value;
+            const extraLinks = document.getElementById('extra-links').value || 0;
+            const totalCost = calculateTotalCost(amount, extraLinks);
+            alert(`Your total cost is $${totalCost}. To complete the order, please proceed to Payoneer and send the payment. For any queries, contact us via email or WhatsApp.`);
+            window.open("https://www.payoneer.com/", "_blank");
+        }
+
+        function calculateTotalCost(amount, extraLinks) {
+            let baseCost = 0;
+            switch (amount) {
+                case "10k": baseCost = 40; break;
+                case "20k": baseCost = 60; break;
+                case "50k": baseCost = 140; break;
+                case "100k": baseCost = 280; break;
+                case "1m": baseCost = 2500; break;
+            }
+            return baseCost + (extraLinks * 5);
+        }
+    </script>
+</body>
+</html>
