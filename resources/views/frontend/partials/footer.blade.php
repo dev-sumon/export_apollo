@@ -1,4 +1,4 @@
-<section>
+<section style="margin-top:50px">
     <h2>Contact Us</h2>
     <div class="contact">
         <p>

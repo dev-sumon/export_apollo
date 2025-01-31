@@ -11,9 +11,10 @@
     <title>@yield('title', 'Export Apollo')</title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('admin/assets/img/kaiadmin/favicon.ico') }}" type="image/x-icon" />
-   
+
     @stack('css_links')
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/responsive.css')}}">
     @stack('css')
 
     <!-- Scripts -->

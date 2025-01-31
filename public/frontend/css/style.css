@@ -34,11 +34,10 @@ header p {
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
-    margin: 20px;
+    margin: 50px 10px 10px 10px;
 }
 .order-section {
     flex: 1;
-    max-width: 752px;
     background: #ffd700;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,7 +51,7 @@ header p {
 }
 .video-section {
     flex: 1;
-    max-width: 600px;
+    /* max-width: 600px; */
 }
 .video-section iframe {
     width: 100%;
@@ -60,7 +59,7 @@ header p {
     border-radius: 8px;
 }
 section h2 {
-    color: #003366;
+    color: #000000;
     font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
@@ -87,14 +86,8 @@ form input, form select, form button {
     background: #f9f9f9;
     color: #333333;
 }
-form input, form select {
-    width: 100%;
-}
 .extra {
     margin-top: 20px;
-}
-.extra input {
-    width: 100%;
 }
 .total-box {
     margin-top: 20px;
@@ -132,16 +125,15 @@ footer {
     margin-right: 8px;
 }
 .instructions {
-    margin-top: 20px;
     font-size: 16px;
     font-weight: bold;
-    color: #003366;
+    color: #FFD700;
     max-height: 400px;
     overflow-y: auto;
     border: 1px solid #cccccc;
     padding: 15px;
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .instructions ul {
@@ -156,5 +148,5 @@ footer {
     position: absolute;
     left: -25px;
     top: 0;
-    color: #003366;
+    color: #FFD700;
 }
