@@ -11,6 +11,9 @@
     .content-wrapper {
         display: block !important;
     }
+    .instructions {
+        margin-top: 50px;
+    }
 }
 
 @media (max-width: 576px) {

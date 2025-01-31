@@ -23,4 +23,5 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
 Route::group(['as' => 'f.'], function () {
     Route::get('/', [HomePageController::class, 'index'])->name('home');
+    Route::post('/order', [HomePageController::class, 'order'])->name('order');
 });

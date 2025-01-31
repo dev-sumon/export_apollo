@@ -38,3 +38,33 @@ function u_user_name($user)
 {
     return $user->name ?? 'Null';
 }
+
+
+function total_lead_amount($lead, $additional_links = 0)
+{
+    switch ($lead) {
+        case '10k':
+            return 30 + ($additional_links * 5);
+            break;
+        case '20k':
+            return 60 + ($additional_links * 5);
+            break;
+        case '50k':
+            return 150 + ($additional_links * 5);
+            break;
+        case '100k':
+            return 280 + ($additional_links * 5);
+            break;
+        case '1m':
+            return 2500 + ($additional_links * 5);
+            break;
+        default:
+            return 0;
+            break;
+    }
+}
+
+function additional_lead_amount($additional_links)
+{
+    return $additional_links * 5;
+}

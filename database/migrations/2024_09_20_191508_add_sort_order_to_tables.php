@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $tables = ['users', 'products','product_categories','product_sub_categories','brands','unit_types','suppliers','companies'];
+        $tables = ['users'];
         foreach ($tables as $table) {
             Schema::table($table, function (Blueprint $table) {
                 $table->integer('sort_order')->default(0);
@@ -24,7 +24,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        $tables = ['users', 'products','product_categories','product_sub_categories','brands','unit_types','suppliers','companies'];
+        $tables = ['users'];
         foreach ($tables as $table) {
             Schema::table($table, function (Blueprint $table) {
                 $table->dropColumn('sort_order');
