@@ -8,11 +8,12 @@
             </a>
         </p>
         <p>
-            <a href="https://wa.link/t25k2w" target="_blank">
+            <a href="https://wa.me/8801318736644" target="_blank">
                 <img src="https://img.icons8.com/ios-filled/50/003366/whatsapp.png" alt="WhatsApp Icon">
                 Contact us on WhatsApp
             </a>
         </p>
+        
     </div>
 </section>
 
