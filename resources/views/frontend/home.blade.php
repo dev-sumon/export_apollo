@@ -23,10 +23,10 @@
             <label for="apollo-url">{{__('Apollo Search URL:')}}</label>
             <input type="url" id="apollo-url" name="apollo-url" placeholder="Paste your Apollo search URL here" required>
 
-            <div class="extra">
+
                 <label for="extra-links">{{__('Additional Links (Extra $5 per link):')}}</label>
                 <input type="number" id="extra-links" name="extra-links" placeholder="Enter number of additional links" min="0" onchange="updateTotal()">
-            </div>
+
 
             <div class="total-box" id="total-box">
                 Total: $0
@@ -37,7 +37,7 @@
     </div>
 
     <!-- Instructions and Video Section (Right) -->
-    <div style="flex: 1; max-width: 600px; display: flex; flex-direction: column; gap: 30px;">
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 30px;">
         <!-- Instructions Section -->
         <div class="instructions">
             <h2>Instructions:</h2>
